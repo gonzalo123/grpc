@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import os
 
 import settings
 from api import ApiClient
