@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      BACKEND_HOST: backend
+    ports:
+      - 5000:5000
+    command: gunicorn -w 4 app:app -b 0.0.0.0:5000
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python server.py
+

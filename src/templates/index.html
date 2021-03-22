@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Demo</title>
+</head>
+<body>
+<h1>{{ name }}</h1>
+
+<p>getAll:</p>
+<ul>
+    {% for item in items %}
+        <li>{{ item.id }} - {{ item.name }}</li>
+    {% endfor %}
+</ul>
+
+<p>getStream:</p>
+<ul>
+    {% for item in items2 %}
+        <li>{{ item.id }} - {{ item.name }}</li>
+    {% endfor %}
+</ul>
+</body>
